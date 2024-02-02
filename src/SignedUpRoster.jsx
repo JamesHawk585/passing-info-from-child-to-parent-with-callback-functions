@@ -1,16 +1,23 @@
-import React from 'react'
-import { useContext } from 'react'
-import { rosterContext } from './App'
-import ParticipantCard from './ParticipantCard'
+import React from "react";
+import { useContext } from "react";
+import { rosterContext } from "./App";
+import ParticipantCard from "./ParticipantCard";
 
 const SignedUpRoster = () => {
-    const roster = useContext(rosterContext)
-    console.log('inside SignedUpRoster:' ,roster)
+  const roster = useContext(rosterContext);
+  console.log("inside SignedUpRoster:", roster);
+
+
+//   Move styling to external css sheet. 
   return (
     <>
-    {roster.map((participant, index) => <ParticipantCard key={index} participant={participant}/>)}
+      {roster.map((participant, index) => (
+        <div style={{ marginBottom: "10px" }}>
+          <ParticipantCard key={index} participant={participant} />
+        </div>
+      ))}
     </>
-  )
-}
+  );
+};
 
-export default SignedUpRoster
+export default SignedUpRoster;

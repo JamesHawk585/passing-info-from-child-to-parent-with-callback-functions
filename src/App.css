@@ -14,7 +14,12 @@
 }
 
 .participantCard {
-  background-color: aqua;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  padding: 8px;
+  border-radius: 8px;
  }
  
 
