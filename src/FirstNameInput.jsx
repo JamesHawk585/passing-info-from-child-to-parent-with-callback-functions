@@ -2,7 +2,7 @@ import React from 'react'
 
 const FirstNameInput = () => {
   return (
-    <div>FirstNameInput</div>
+        <input type='text' placeholder='First Name'></input>
   )
 }
 

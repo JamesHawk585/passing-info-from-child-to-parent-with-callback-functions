@@ -2,7 +2,7 @@ import React from 'react'
 
 const DateOfBirthInput = () => {
   return (
-    <div>DateOfBirthInput</div>
+    <input type="date" id="dob" name="dob"></input>
   )
 }
 
