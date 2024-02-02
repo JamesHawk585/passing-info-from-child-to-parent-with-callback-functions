@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <header></header>
+      <header className='App-Header'>Sign-Up</header>
       <body className="App-body">
         <FormContainer />
         <rosterContext.Provider value={roster}>
