@@ -3,7 +3,6 @@ import FirstNameInput from "./FirstNameInput";
 import LastNameInput from "./LastNameInput";
 import DateOfBirthInput from "./DateOfBirthInput";
 import SubmitButton from "./SubmitButton";
-
 import "./App.css";
 
 

@@ -14,9 +14,11 @@ function App() {
     setRoster(roster.filter(participant => participant.id !== particpantId))}
 
   const onAddParticipantToRoster = (e) => {
-    e.preventDefault()
     console.log('Adding participant...😎')
+    console.log(e.target.value)
   }
+
+  // e.target.value returns undefined. May be because SubmitButton is in it's own child component of the App.jsx parent. 
 
   useEffect(() => {
     fetch(API)
