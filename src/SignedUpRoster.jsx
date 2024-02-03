@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { rosterContext } from "./App";
 import ParticipantCard from "./ParticipantCard";
 
-const SignedUpRoster = () => {
+const SignedUpRoster = ({ onDeleteParticipant }) => {
   const roster = useContext(rosterContext);
   console.log("inside SignedUpRoster:", roster);
 
@@ -13,7 +13,7 @@ const SignedUpRoster = () => {
     <>
       {roster.map((participant, index) => (
         <div style={{ marginBottom: "10px" }}>
-          <ParticipantCard key={index} participant={participant} />
+          <ParticipantCard key={index} participant={participant} onDeleteParticipant={onDeleteParticipant}/>
         </div>
       ))}
     </>

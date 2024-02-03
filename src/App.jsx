@@ -10,6 +10,9 @@ export const rosterContext = createContext();
 function App() {
   const [roster, setRoster] = useState([]);
 
+  const onDeleteParticipant = (particpantId) => {
+    setRoster(roster.filter(participant => participant.id !== particpantId))}
+
   useEffect(() => {
     fetch(API)
       .then((r) => r.json())
@@ -24,7 +27,7 @@ function App() {
       <body className="App-body">
         <FormContainer />
         <rosterContext.Provider value={roster}>
-          <SignedUpRoster />
+          <SignedUpRoster onDeleteParticipant={onDeleteParticipant}/>
         </rosterContext.Provider>
       </body>
     </div>
