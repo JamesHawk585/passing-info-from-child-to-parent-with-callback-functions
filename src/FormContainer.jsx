@@ -6,10 +6,17 @@ import SubmitButton from "./SubmitButton";
 
 import "./App.css";
 
-const FormContainer = ({ onDeleteParticipant }) => {
+
+
+const FormContainer = ({ onAddParticipantToRoster }) => {
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    onAddParticipantToRoster(e)
+  }
   return (
     <div id="formInputContainer">
-      <form id="inputForm">
+      <form id="inputForm" onSubmit={handleSubmit}>
         <FirstNameInput />
         <LastNameInput />
         <DateOfBirthInput />

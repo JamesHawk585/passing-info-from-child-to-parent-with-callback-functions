@@ -19,4 +19,4 @@ console.log(lastName)
 export default ParticipantCard;
 
 
-// Not passing participant to delete button correctly.  
+ 

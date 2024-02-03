@@ -13,19 +13,22 @@ function App() {
   const onDeleteParticipant = (particpantId) => {
     setRoster(roster.filter(participant => participant.id !== particpantId))}
 
+  const onAddParticipantToRoster = (e) => {
+    e.preventDefault()
+    console.log('Adding participant...😎')
+  }
+
   useEffect(() => {
     fetch(API)
       .then((r) => r.json())
       .then(setRoster);
   }, []);
 
-  // useContext() on signed up roster. Wrap SignedUpRoster in useCOntext() provider.
-
   return (
     <div className="App">
       <header className='App-Header'>Sign-Up</header>
       <body className="App-body">
-        <FormContainer />
+        <FormContainer onAddParticipantToRoster={onAddParticipantToRoster}/>
         <rosterContext.Provider value={roster}>
           <SignedUpRoster onDeleteParticipant={onDeleteParticipant}/>
         </rosterContext.Provider>
